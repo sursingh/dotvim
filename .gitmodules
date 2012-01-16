@@ -25,3 +25,15 @@
 [submodule "bundle/perl"]
 	path = bundle/perl
 	url = https://github.com/petdance/vim-perl
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "bundle/perl-support"]
+	path = bundle/perl-support
+	url = https://github.com/vim-scripts/perl-support.vim.git
+[submodule "bundle/antlr3"]
+	path = bundle/antlr3
+	url = https://github.com/vim-scripts/antlr3.vim.git
+[submodule "bundle/scala"]
+	path = bundle/scala
+	url = https://github.com/vim-scripts/vim-scala.git
