@@ -1,39 +1,52 @@
 [submodule "bundle/pathogen"]
 	path = bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+	ignore = untracked
 [submodule "bundle/asciidoc"]
 	path = bundle/asciidoc
 	url = https://github.com/dagwieers/asciidoc-vim.git
+	ignore = untracked
 [submodule "bundle/c"]
 	path = bundle/c
 	url = https://github.com/vim-scripts/c.vim.git
+	ignore = untracked
 [submodule "bundle/tlib"]
 	path = bundle/tlib
 	url = git://github.com/tomtom/tlib_vim.git
+	ignore = untracked
 [submodule "bundle/tskeleton"]
 	path = bundle/tskeleton
 	url = https://github.com/tomtom/tskeleton_vim.git
+	ignore = untracked
 [submodule "bundle/vcscommand"]
 	path = bundle/vcscommand
 	url = git://repo.or.cz/vcscommand
+	ignore = untracked
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+	ignore = untracked
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+	ignore = untracked
 [submodule "bundle/perl"]
 	path = bundle/perl
 	url = https://github.com/petdance/vim-perl
+	ignore = untracked
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = https://github.com/vim-scripts/bufexplorer.zip.git
+	ignore = untracked
 [submodule "bundle/perl-support"]
 	path = bundle/perl-support
 	url = https://github.com/vim-scripts/perl-support.vim.git
+	ignore = untracked
 [submodule "bundle/antlr3"]
 	path = bundle/antlr3
 	url = https://github.com/vim-scripts/antlr3.vim.git
+	ignore = untracked
 [submodule "bundle/scala"]
 	path = bundle/scala
 	url = https://github.com/vim-scripts/vim-scala.git
+	ignore = untracked
