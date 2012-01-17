@@ -13,5 +13,12 @@ And finally, add following at the start of ~/.vimrc file
 
 * source ~/.vim/vimrc
 
+fixup\_untracked.sh
+----------------------------------------------------------
 
+pathogen updates the tag files in the plugin directories. 
+Due to this git assumes that we have local changes.
+
+This scripts set the "ignore = untracked" to ignore all new files. 
+This needs to be run everytime a new submodule is added
 
