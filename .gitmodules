@@ -48,5 +48,4 @@
 	ignore = untracked
 [submodule "bundle/scala"]
 	path = bundle/scala
-	url = https://github.com/vim-scripts/vim-scala.git
-	ignore = untracked
+	url = https://github.com/bmatheny/vim-scala.git
