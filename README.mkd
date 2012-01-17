@@ -1,0 +1,17 @@
+dotvim
+===========================================================
+
+collection of vim plugins for easiar maintainance
+
+Cloning
+-----------------------------------------------------------
+
+* git clone git://github.com/sursingh/dotvim.git ~/.vim
+* (cd .vim; git submodule update --init)
+
+And finally, add following at the start of ~/.vimrc file
+
+* source ~/.vim/vimrc
+
+
+
