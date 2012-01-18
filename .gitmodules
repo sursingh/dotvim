@@ -2,8 +2,8 @@
 	path = bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
 	ignore = untracked
-[submodule "bundle/asciidoc"]
-	path = bundle/asciidoc
+[submodule "bundle/asciidoc/syntax"]
+	path = bundle/asciidoc/syntax
 	url = https://github.com/dagwieers/asciidoc-vim.git
 	ignore = untracked
 [submodule "bundle/c"]
