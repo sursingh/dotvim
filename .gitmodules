@@ -49,3 +49,6 @@
 [submodule "bundle/scala"]
 	path = bundle/scala
 	url = https://github.com/bmatheny/vim-scala.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
