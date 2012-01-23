@@ -49,9 +49,12 @@
 [submodule "bundle/scala"]
 	path = bundle/scala
 	url = https://github.com/bmatheny/vim-scala.git
+	ignore = untracked
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+	ignore = untracked
 [submodule "bundle/cscope_macros"]
 	path = bundle/cscope_macros
 	url = https://github.com/vim-scripts/cscope_macros.vim.git
+	ignore = untracked
