@@ -7,7 +7,16 @@ set modeline
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
 
+" Colorscheme {{{
 set t_Co=256
 let g:solarized_termcolors=16
+set background=dark
 colorscheme solarized
 set background=dark
+" }}}
+
+" Mapping {{{
+nnoremap <silent> <F9> :TagbarToggle<CR>
+" }}}
+
+" vim: set fdm=marker : "
