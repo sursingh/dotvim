@@ -21,5 +21,6 @@ nnoremap <silent> <F9> :TagbarToggle<CR>
 autocmd BufRead,BufNewFile *.tt set filetype=tt2
 " }}}
 
+autocmd BufRead,BufNewFile *.scala set makeprg=sbt\ -Dsbt.log.noformat=true
 
 " vim: set fdm=marker : "
