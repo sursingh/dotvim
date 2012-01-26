@@ -14,9 +14,12 @@ set background=dark
 colorscheme solarized
 set background=dark
 " }}}
-
 " Mapping {{{
 nnoremap <silent> <F9> :TagbarToggle<CR>
 " }}}
+" FileType mapping{{{
+autocmd BufRead,BufNewFile *.tt set filetype=tt2
+" }}}
+
 
 " vim: set fdm=marker : "
