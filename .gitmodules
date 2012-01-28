@@ -58,3 +58,7 @@
 	path = bundle/cscope_macros
 	url = https://github.com/vim-scripts/cscope_macros.vim.git
 	ignore = untracked
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+	ignore = untracked
