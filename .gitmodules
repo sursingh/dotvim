@@ -62,3 +62,6 @@
 	path = bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
 	ignore = untracked
+[submodule "bundle/scala-vim-snippets"]
+	path = bundle/scala-vim-snippets
+	url = git@github.com:sursingh/scala-vim-snippets.git
