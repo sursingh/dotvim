@@ -65,3 +65,4 @@
 [submodule "bundle/scala-vim-snippets"]
 	path = bundle/scala-vim-snippets
 	url = git@github.com:sursingh/scala-vim-snippets.git
+	ignore = untracked
