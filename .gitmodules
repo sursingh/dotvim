@@ -66,3 +66,15 @@
 	path = bundle/scala-vim-snippets
 	url = git@github.com:sursingh/scala-vim-snippets.git
 	ignore = untracked
+[submodule "bundle/pydoc"]
+	path = bundle/pydoc
+	url = https://github.com/fs111/pydoc.vim.git
+	ignore = untracked
+[submodule "bundle/python-syntax"]
+	path = bundle/python-syntax
+	url = https://github.com/vim-scripts/python.vim--Vasiliev.git
+	ignore = untracked
+[submodule "bundle/python"]
+	path = bundle/python
+	url = https://github.com/vim-scripts/python.vim.git
+	ignore = untracked
