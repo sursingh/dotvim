@@ -57,9 +57,14 @@ set background=dark
 " }}}
 " Mapping {{{
 nnoremap <silent> <F9> :TagbarToggle<CR>
+nnoremap <silent>  "+y
 " }}}
 " FileType mapping{{{
 autocmd BufRead,BufNewFile *.tt set filetype=tt2
+autocmd BufRead,BufNewFile *.gradle set filetype=groovy cin
 " }}}
+
+autocmd BufRead,BufNewFile *.adoc 
+	    \ set syntax=asciidoc
 
 " vim: set fdm=marker : "
