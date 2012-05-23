@@ -55,6 +55,12 @@ set background=dark
 colorscheme solarized
 set background=dark
 " }}}
+
+function! PythonSettings()
+	map <C-F2> <ESC>:!python %<CR>
+	set sts et
+endfun
+
 " Mapping {{{
 nnoremap <silent> <F9> :TagbarToggle<CR>
 nnoremap <silent>  "+y
@@ -62,9 +68,12 @@ nnoremap <silent>  "+y
 " FileType mapping{{{
 autocmd BufRead,BufNewFile *.tt set filetype=tt2
 autocmd BufRead,BufNewFile *.gradle set filetype=groovy cin
-" }}}
-
+autocmd BufRead,BufNewFile *.py call PythonSettings()
 autocmd BufRead,BufNewFile *.adoc 
 	    \ set syntax=asciidoc
+" }}}
+
+
+
 
 " vim: set fdm=marker : "

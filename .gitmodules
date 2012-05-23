@@ -6,10 +6,6 @@
 	path = bundle/asciidoc/syntax
 	url = https://github.com/dagwieers/asciidoc-vim.git
 	ignore = untracked
-[submodule "bundle/c"]
-	path = bundle/c
-	url = https://github.com/vim-scripts/c.vim.git
-	ignore = untracked
 [submodule "bundle/tlib"]
 	path = bundle/tlib
 	url = git://github.com/tomtom/tlib_vim.git
@@ -81,6 +77,11 @@
 [submodule "bundle/pythoncomplete"]
 	path = bundle/pythoncomplete
 	url = https://github.com/vim-scripts/pythoncomplete.git
+	ignore = untracked
 [submodule "bundle/VOoM"]
 	path = bundle/VOoM
 	url = https://github.com/vim-scripts/VOoM.git
+	ignore = untracked
+[submodule "bundle/c-support"]
+	path = bundle/c-support
+	url = https://sursingh@github.com/sursingh/c.vim.git
