@@ -85,3 +85,16 @@
 [submodule "bundle/c-support"]
 	path = bundle/c-support
 	url = https://sursingh@github.com/sursingh/c.vim.git
+	ignore = untracked
+[submodule "bundle/greputils"]
+	path = bundle/greputils
+	url = https://github.com/vim-scripts/greputils.git
+	ignore = untracked
+[submodule "bundle/multvals"]
+	path = bundle/multvals
+	url = https://github.com/vim-scripts/multvals.vim.git
+	ignore = untracked
+[submodule "bundle/genutils"]
+	path = bundle/genutils
+	url = https://github.com/vim-scripts/genutils.git
+	ignore = untracked
