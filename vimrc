@@ -1,3 +1,44 @@
+" Toggle the tasklist
+map <leader>td <Plug>TaskList
+
+" Run pep8
+let g:pep8_map='<leader>8'
+
+" run py.test's
+nmap <silent><Leader>tf <Esc>:Pytest file<CR>
+nmap <silent><Leader>tc <Esc>:Pytest class<CR>
+nmap <silent><Leader>tm <Esc>:Pytest method<CR>
+nmap <silent><Leader>tn <Esc>:Pytest next<CR>
+nmap <silent><Leader>tp <Esc>:Pytest previous<CR>
+nmap <silent><Leader>te <Esc>:Pytest error<CR>
+
+" open/close the quickfix window
+nmap <leader>c :copen<CR>
+nmap <leader>cc :cclose<CR>
+
+" Open NerdTree
+map <leader>n :NERDTreeToggle<CR>
+
+" Run command-t file search
+map <leader>f :CommandT<CR>
+" Ack searching
+nmap <leader>a <Esc>:Ack!
+
+" Load the Gundo window
+map <leader>g :GundoToggle<CR>
+
+" Jump to the definition of whatever the cursor is on
+map <leader>j :RopeGotoDefinition<CR>
+
+" Rename whatever the cursor is on (including references to it)
+map <leader>r :RopeRename<CR>
+
+set guifont=Monospace\ 13
+
+" ==========================================================
+" Pathogen - Allows us to organize our vim plugins
+" ==========================================================
+" Load pathogen with docs for all plugins
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
@@ -74,6 +115,49 @@ autocmd BufRead,BufNewFile *.adoc
 " }}}
 
 
+set wildmenu                  " Menu completion in command mode on <Tab>
+set wildmode=full             " <Tab> cycles between all matching choices.
+" Ignore these files when completing
+set wildignore+=*.o,*.obj,.git,*.pyc
+set wildignore+=eggs/**
+set wildignore+=*.egg-info/**
+set grepprg=ack         " replace the default grep program with ack
 
+""" Insert completion
+" don't select first item, follow typing in autocomplete
+set completeopt=menuone,longest,preview
+set pumheight=6             " Keep a small completion window
+" displays tabs with :set list & displays when a line runs off-screen
+" set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
+" set list
+
+" Python
+"au BufRead *.py compiler nose
+au FileType python set omnifunc=pythoncomplete#Complete
+au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+au FileType python setlocal fdm=indent foldlevel=99
+" Don't let pyflakes use the quickfix window
+let g:pyflakes_use_quickfix = 0
+
+" Add the virtualenv's site-packages to vim path
+if has('python')
+py << EOF
+import os.path
+import sys
+import vim
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    sys.path.insert(0, project_base_dir)
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
+endif
+
+" Load up virtualenv's vimrc if it exists
+if filereadable($VIRTUAL_ENV . '/.vimrc')
+    source $VIRTUAL_ENV/.vimrc
+endif
 
 " vim: set fdm=marker : "
