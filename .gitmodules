@@ -153,3 +153,6 @@
 [submodule "bundle/pyflakes-pathogen"]
 	path = bundle/pyflakes-pathogen
 	url = https://github.com/mitechie/pyflakes-pathogen.git
+[submodule "bundle/DoxygenToolkit"]
+	path = bundle/DoxygenToolkit
+	url = https://github.com/vim-scripts/DoxygenToolkit.vim
