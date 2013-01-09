@@ -156,3 +156,6 @@
 [submodule "bundle/DoxygenToolkit"]
 	path = bundle/DoxygenToolkit
 	url = https://github.com/vim-scripts/DoxygenToolkit.vim
+[submodule "bundle/django-support"]
+	path = bundle/django-support
+	url = git://github.com/lambdalisue/vim-django-support.git
