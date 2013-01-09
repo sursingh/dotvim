@@ -110,10 +110,6 @@
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
 	ignore = untracked
-[submodule "bundle/minibufexpl"]
-	path = bundle/minibufexpl
-	url = https://github.com/sontek/minibufexpl.vim.git
-	ignore = untracked
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = https://github.com/wincent/Command-T.git
