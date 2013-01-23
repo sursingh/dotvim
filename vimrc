@@ -98,7 +98,7 @@ colorscheme solarized
 
 function! PythonSettings()
 	map <C-F2> <ESC>:!python %<CR>
-	set sts et
+	set noet ts=4
 endfun
 
 " Mapping {{{
