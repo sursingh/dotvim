@@ -91,10 +91,9 @@ set cinoptions=t0,l1,g0,(0,:0,l1,+8
 
 " Colorscheme {{{
 set t_Co=256
-let g:solarized_termcolors=16
-set background=dark
+let g:solarized_termcolors=256
+set background=light
 colorscheme solarized
-set background=dark
 " }}}
 
 function! PythonSettings()
