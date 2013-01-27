@@ -161,3 +161,6 @@
 [submodule "bundle/R"]
 	path = bundle/R
 	url = git://github.com/vim-scripts/Vim-R-plugin.git
+[submodule "bundle/screentmux"]
+	path = bundle/screentmux
+	url = git://github.com/vim-scripts/Screen-vim---gnu-screentmux.git
