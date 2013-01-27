@@ -158,3 +158,6 @@
 	path = bundle/django-support
 	url = git://github.com/lambdalisue/vim-django-support.git
 	ignore = untracked
+[submodule "bundle/R"]
+	path = bundle/R
+	url = git://github.com/vim-scripts/Vim-R-plugin.git
