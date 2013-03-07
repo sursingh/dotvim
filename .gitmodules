@@ -142,10 +142,6 @@
 	path = bundle/ropevim
 	url = https://github.com/sontek/rope-vim.git
 	ignore = untracked
-[submodule "bundle/pyflakes-pathogen"]
-	path = bundle/pyflakes-pathogen
-	url = https://github.com/mitechie/pyflakes-pathogen.git
-	ignore = untracked
 [submodule "bundle/DoxygenToolkit"]
 	path = bundle/DoxygenToolkit
 	url = https://github.com/vim-scripts/DoxygenToolkit.vim
@@ -165,4 +161,8 @@
 [submodule "bundle/jedi-vim"]
 	path = bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
+	ignore = untracked
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
 	ignore = untracked
