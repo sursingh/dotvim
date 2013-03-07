@@ -74,10 +74,6 @@
 	path = bundle/python
 	url = https://github.com/vim-scripts/python.vim.git
 	ignore = untracked
-[submodule "bundle/pythoncomplete"]
-	path = bundle/pythoncomplete
-	url = https://github.com/vim-scripts/pythoncomplete.git
-	ignore = untracked
 [submodule "bundle/VOoM"]
 	path = bundle/VOoM
 	url = https://github.com/vim-scripts/VOoM.git
@@ -166,6 +162,7 @@
 	path = bundle/screentmux
 	url = git://github.com/vim-scripts/Screen-vim---gnu-screentmux.git
 	ignore = untracked
-[submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/jedi-vim"]
+	path = bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
+	ignore = untracked
