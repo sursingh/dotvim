@@ -166,3 +166,6 @@
 	path = bundle/screentmux
 	url = git://github.com/vim-scripts/Screen-vim---gnu-screentmux.git
 	ignore = untracked
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
