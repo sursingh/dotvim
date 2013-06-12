@@ -134,3 +134,7 @@
 	path = bundle/py-pep8-indent
 	url = https://github.com/hynek/vim-python-pep8-indent.git
 	ignore = untracked
+[submodule "bundle/web-indent"]
+	path = bundle/web-indent
+	url = git://github.com/lukaszb/vim-web-indent.git
+	ignore = untracked
