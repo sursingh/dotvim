@@ -33,7 +33,7 @@ map <leader>j :RopeGotoDefinition<CR>
 " Rename whatever the cursor is on (including references to it)
 map <leader>r :RopeRename<CR>
 
-set guifont=Monospace\ 13
+set guifont=Monospace\ 10
 
 " ==========================================================
 " Pathogen - Allows us to organize our vim plugins
@@ -64,7 +64,7 @@ map \fs A /* {{{ */
 map \fe A /* }}} */
 set fdm=marker
 
-set mouse=vih
+set mouse=nvih
 map <C-Left>	:tabNext<CR>
 map <C-Right>	:tabPrev<CR>
 
@@ -96,11 +96,6 @@ set background=light
 colorscheme solarized
 " }}}
 
-function! PythonSettings()
-	map <C-F2> <ESC>:!python %<CR>
-	set noet ts=4
-endfun
-
 " Mapping {{{
 nnoremap <silent> <F9> :TagbarToggle<CR>
 nnoremap <silent>  "+y
@@ -108,7 +103,6 @@ nnoremap <silent>  "+y
 " FileType mapping{{{
 autocmd BufRead,BufNewFile *.tt set filetype=tt2
 autocmd BufRead,BufNewFile *.gradle set filetype=groovy cin
-autocmd BufRead,BufNewFile *.py call PythonSettings()
 autocmd BufRead,BufNewFile *.adoc 
 	    \ set syntax=asciidoc
 " }}}
@@ -133,8 +127,8 @@ set pumheight=6             " Keep a small completion window
 " Python
 "au BufRead *.py compiler nose
 au FileType python set omnifunc=pythoncomplete#Complete
-au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 cin cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 cin cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 au FileType python setlocal fdm=indent foldlevel=99
 
