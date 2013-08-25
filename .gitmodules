@@ -150,6 +150,10 @@
 	path = bundle/screentmux
 	url = git://github.com/vim-scripts/Screen-vim---gnu-screentmux.git
 	ignore = untracked
+[submodule "bundle/jedi-vim"]
+	path = bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
+	ignore = untracked
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
@@ -161,4 +165,3 @@
 [submodule "bundle/clang_complete"]
 	path = bundle/clang_complete
 	url = https://github.com/Rip-Rip/clang_complete.git
-	ignore = untracked
