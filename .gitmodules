@@ -26,10 +26,6 @@
 	path = bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 	ignore = untracked
-[submodule "bundle/perl"]
-	path = bundle/perl
-	url = https://github.com/petdance/vim-perl
-	ignore = untracked
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = https://github.com/vim-scripts/bufexplorer.zip.git
