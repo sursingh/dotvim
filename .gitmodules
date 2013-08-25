@@ -54,14 +54,6 @@
 	path = bundle/cscope_macros
 	url = https://github.com/vim-scripts/cscope_macros.vim.git
 	ignore = untracked
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
-	ignore = untracked
-[submodule "bundle/scala-vim-snippets"]
-	path = bundle/scala-vim-snippets
-	url = git@github.com:sursingh/scala-vim-snippets.git
-	ignore = untracked
 [submodule "bundle/pydoc"]
 	path = bundle/pydoc
 	url = https://github.com/fs111/pydoc.vim.git
@@ -169,3 +161,4 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+	ignore = untracked
