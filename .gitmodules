@@ -10,14 +10,6 @@
 	path = bundle/tlib
 	url = git://github.com/tomtom/tlib_vim.git
 	ignore = untracked
-[submodule "bundle/tskeleton"]
-	path = bundle/tskeleton
-	url = https://github.com/tomtom/tskeleton_vim.git
-	ignore = untracked
-[submodule "bundle/vcscommand"]
-	path = bundle/vcscommand
-	url = git://repo.or.cz/vcscommand
-	ignore = untracked
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
@@ -29,18 +21,6 @@
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = https://github.com/vim-scripts/bufexplorer.zip.git
-	ignore = untracked
-[submodule "bundle/perl-support"]
-	path = bundle/perl-support
-	url = https://github.com/vim-scripts/perl-support.vim.git
-	ignore = untracked
-[submodule "bundle/antlr3"]
-	path = bundle/antlr3
-	url = https://github.com/vim-scripts/antlr3.vim.git
-	ignore = untracked
-[submodule "bundle/scala"]
-	path = bundle/scala
-	url = https://github.com/bmatheny/vim-scala.git
 	ignore = untracked
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
@@ -85,10 +65,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
-	ignore = untracked
-[submodule "bundle/git"]
-	path = bundle/git
-	url = https://github.com/tpope/vim-git.git
 	ignore = untracked
 [submodule "bundle/supertab"]
 	path = bundle/supertab
@@ -137,10 +113,6 @@
 [submodule "bundle/django-support"]
 	path = bundle/django-support
 	url = git://github.com/lambdalisue/vim-django-support.git
-	ignore = untracked
-[submodule "bundle/R"]
-	path = bundle/R
-	url = git://github.com/vim-scripts/Vim-R-plugin.git
 	ignore = untracked
 [submodule "bundle/screentmux"]
 	path = bundle/screentmux
