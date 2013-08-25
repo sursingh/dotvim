@@ -162,3 +162,6 @@
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
 	ignore = untracked
+[submodule "bundle/clang_complete"]
+	path = bundle/clang_complete
+	url = https://github.com/Rip-Rip/clang_complete.git

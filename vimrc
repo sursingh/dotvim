@@ -151,4 +151,14 @@ if filereadable($VIRTUAL_ENV . '/.vimrc')
     source $VIRTUAL_ENV/.vimrc
 endif
 
+" Mappings for NerdTree {{{
+let NERDTreeIgnore=['\~$', '^obj-*/*', '^*.pyc$']
+" }}}
+"
+
+let g:syntastic_c_config_file = '.config'
+let g:syntastic_cpp_config_file = '.config'
+let g:clang_user_options='|| exit 0'
+let g:clang_close_preview=1
+
 " vim: set fdm=marker : "
