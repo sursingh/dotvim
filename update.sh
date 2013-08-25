@@ -3,8 +3,6 @@
 git pull --rebase
 git submodule update --init
 
-(cd bundle/jedi-vim; git submodule update --init)
-
 # pathogen updates the tag files in the plugin directories. 
 # Due to this git assumes that we have local changes.
 # 
@@ -14,4 +12,3 @@ git submodule update --init
 git submodule --quiet foreach echo \$name \
     | xargs -n1 -I{} git config --file .gitmodules submodule.{}.ignore untracked
 
-git submodule --quiet foreach 'echo "doc/tags*" >.git/info/exclude'
