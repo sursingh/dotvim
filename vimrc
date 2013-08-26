@@ -179,5 +179,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let g:SuperTabDefaultCompletionType = "context"
+au BufRead Makefile.inc set ft=make
+au BufRead *.stg set fdm=marker foldmarker=<<,>>
 
 " vim: set fdm=marker : "
