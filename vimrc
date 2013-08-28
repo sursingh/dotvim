@@ -161,4 +161,6 @@ let g:syntastic_cpp_config_file = '.config'
 let g:clang_user_options='|| exit 0'
 let g:clang_close_preview=1
 
+let g:syntastic_python_checkers= ['pyflakes', 'pep8']
+let g:syntastic_python_pep8_args= ''
 " vim: set fdm=marker : "

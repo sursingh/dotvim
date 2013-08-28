@@ -3,6 +3,8 @@
 git pull --rebase
 git submodule update --init
 
+(cd bundle/jedi-vim; git submodule update --init)
+
 # pathogen updates the tag files in the plugin directories. 
 # Due to this git assumes that we have local changes.
 # 
