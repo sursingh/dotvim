@@ -163,4 +163,8 @@ let g:clang_close_preview=1
 
 let g:syntastic_python_checkers= ['pyflakes', 'pep8']
 let g:syntastic_python_pep8_args= ''
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
 " vim: set fdm=marker : "
