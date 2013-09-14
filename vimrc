@@ -1,6 +1,8 @@
 " Toggle the tasklist
 map <leader>td <Plug>TaskList
 
+set softtabstop=4
+
 " Run pep8
 let g:pep8_map='<leader>8'
 
@@ -47,6 +49,8 @@ set modeline
 " set statusline=%{fugitive#statusline()}
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
+set scrolloff=5
+set cursorline
 
 " {{{ General Customizations
 " set columns=80
