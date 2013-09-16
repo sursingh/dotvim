@@ -134,3 +134,6 @@
 	path = bundle/clang_complete
 	url = https://github.com/Rip-Rip/clang_complete.git
 	ignore = untracked
+[submodule "bundle/py-pep8-indent"]
+	path = bundle/py-pep8-indent
+	url = https://github.com/hynek/vim-python-pep8-indent.git
