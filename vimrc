@@ -125,7 +125,7 @@ set wildmode=full             " <Tab> cycles between all matching choices.
 set wildignore+=*.o,*.obj,.git,*.pyc
 set wildignore+=eggs/**
 set wildignore+=*.egg-info/**
-set grepprg=ack         " replace the default grep program with ack
+set grepprg=ack-grep         " replace the default grep program with ack
 
 """ Insert completion
 " don't select first item, follow typing in autocomplete
@@ -180,6 +180,6 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let g:SuperTabDefaultCompletionType = "context"
 au BufRead Makefile.inc set ft=make
-au BufRead *.stg set fdm=marker foldmarker=<<,>>
+au BufRead *.stg set fdm=syntax ft=stg
 
 " vim: set fdm=marker : "
