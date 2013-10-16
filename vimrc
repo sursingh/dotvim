@@ -62,6 +62,7 @@ set backspace=2			" allow backspacing over everything in insert mode
 set ruler				" show line and column number of the cursor position
 set hlsearch incsearch
 set nocst  " no cscope tags
+set cscopequickfix=s-,c-,d-,i-,t-,e-
 
 set formatoptions=tcroq
 map \fs A /* {{{ */
