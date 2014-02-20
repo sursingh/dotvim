@@ -45,6 +45,12 @@ runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
+let g:gofmt_command = "gofmt -tabs=false -tabwidth=4"
+
+
+
 set modeline
 " set statusline=%{fugitive#statusline()}
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
@@ -171,5 +177,7 @@ let g:syntastic_python_pep8_args= ''
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+let g:SuperTabDefaultCompletionType = "context"
 
 " vim: set fdm=marker : "
