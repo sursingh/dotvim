@@ -32,6 +32,7 @@ function rmmod
     run git add .gitmodules
 
     rm -rf $MOD_PATH
+    rm -rf .git/modules/$MOD_PATH
 }
 
 for mod in $MODULES
