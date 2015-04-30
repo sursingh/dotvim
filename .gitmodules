@@ -137,6 +137,8 @@
 [submodule "bundle/ropevim"]
 	path = bundle/ropevim
 	url = https://github.com/python-rope/ropevim.git
+	ignore = untracked
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+	ignore = untracked
