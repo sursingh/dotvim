@@ -167,6 +167,7 @@ let NERDTreeIgnore=['\~$', '^obj-*/*', '^*.pyc$']
 " }}}
 "
 
+" Mappings for Syntastic {{{
 let g:syntastic_c_config_file = '.config'
 let g:syntastic_cpp_config_file = '.config'
 let g:clang_user_options='|| exit 0'
@@ -174,9 +175,36 @@ let g:clang_close_preview=1
 
 let g:syntastic_python_checkers= ['pyflakes', 'pep8']
 let g:syntastic_python_pep8_args= ''
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" }}}
+
+
+" Mappings for UltiSnips {{{
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" }}}
+
+" Mappings for javascript-libraries-syntax {{{
+autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
+autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 0
+autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
+autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
+" }}}
+
+" Mappings for angular {{{
+let g:angular_source_directory = ["app/scripts/", "app/scripts/*"]
+let g:angular_test_directory = ["test/specs/", "test/specs/*"]
+" }}}
 
 let g:SuperTabDefaultCompletionType = "context"
 au BufRead Makefile.inc set ft=make

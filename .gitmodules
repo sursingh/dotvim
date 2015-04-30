@@ -142,3 +142,23 @@
 	path = bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
 	ignore = untracked
+[submodule "bundle/angular"]
+	path = bundle/angular
+	url = git://github.com/burnettk/vim-angular.git
+	ignore = untracked
+[submodule "bundle/javascript"]
+	path = bundle/javascript
+	url = https://github.com/pangloss/vim-javascript.git
+	ignore = untracked
+[submodule "bundle/javascript-libraries-syntax"]
+	path = bundle/javascript-libraries-syntax
+	url = https://github.com/othree/javascript-libraries-syntax.vim.git
+	ignore = untracked
+[submodule "bundle/angular-vim-snippets"]
+	path = bundle/angular-vim-snippets
+	url = https://github.com/matthewsimo/angular-vim-snippets.git
+	ignore = untracked
+[submodule "bundle/jasmine"]
+	path = bundle/jasmine
+	url = https://github.com/claco/jasmine.vim.git
+	ignore = untracked
