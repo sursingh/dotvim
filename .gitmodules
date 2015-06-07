@@ -165,6 +165,11 @@
 [submodule "bundle/bootstrap-snippets"]
 	path = bundle/bootstrap-snippets
 	url = https://github.com/bonsaiben/bootstrap-snippets.git
+	ignore = untracked
 [submodule "bundle/jade"]
 	path = bundle/jade
 	url = https://github.com/digitaltoad/vim-jade.git
+	ignore = untracked
+[submodule "bundle/Dockerfile"]
+	path = bundle/Dockerfile
+	url = https://github.com/ekalinin/Dockerfile.vim.git
