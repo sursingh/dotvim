@@ -170,6 +170,7 @@ let NERDTreeIgnore=['\~$', '^obj-*/*', '^*.pyc$']
 " Mappings for Syntastic {{{
 let g:syntastic_c_config_file = '.config'
 let g:syntastic_cpp_config_file = '.config'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:clang_user_options='|| exit 0'
 let g:clang_close_preview=1
 
