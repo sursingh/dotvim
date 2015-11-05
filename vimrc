@@ -62,7 +62,7 @@ set cursorline
 " set columns=80
 let c_space_errors=1
 set cmdheight=1
-set textwidth=78 shiftwidth=4
+set textwidth=78 shiftwidth=2 et
 set modeline modelines=5
 set backspace=2			" allow backspacing over everything in insert mode
 set ruler				" show line and column number of the cursor position
@@ -210,5 +210,7 @@ let g:angular_test_directory = ["test/specs/", "test/specs/*"]
 let g:SuperTabDefaultCompletionType = "context"
 au BufRead Makefile.inc set ft=make
 au BufRead *.stg set fdm=syntax ft=stg
+
+set et
 
 " vim: set fdm=marker : "
