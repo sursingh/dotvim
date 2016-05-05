@@ -106,10 +106,6 @@
 	path = bundle/DoxygenToolkit
 	url = https://github.com/vim-scripts/DoxygenToolkit.vim
 	ignore = untracked
-[submodule "bundle/django-support"]
-	path = bundle/django-support
-	url = git://github.com/lambdalisue/vim-django-support.git
-	ignore = untracked
 [submodule "bundle/screentmux"]
 	path = bundle/screentmux
 	url = git://github.com/vim-scripts/Screen-vim---gnu-screentmux.git
@@ -174,3 +170,9 @@
 	path = bundle/vagrant
 	url = https://github.com/markcornick/vim-vagrant.git
 	ignore = untracked
+[submodule "bundle/LanguageTool"]
+	path = bundle/LanguageTool
+	url = https://github.com/vim-scripts/LanguageTool
+[submodule "bundle/vim-bazel"]
+	path = bundle/vim-bazel
+	url = https://github.com/davidzchen/vim-bazel.git
