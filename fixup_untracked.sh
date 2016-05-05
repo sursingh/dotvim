@@ -6,9 +6,9 @@
 # This scripts set the "ignore = untracked" to ignore all new files. 
 # This needs to be run everytime a new submodule is added
 
-git submodule --quiet foreach echo \$name \
-    | xargs -n1 -I{} git config --file .gitmodules submodule.{}.ignore untracked
+git submodule --quiet foreach 'echo $name' \
+  | xargs -n1 -I{} git config --file .gitmodules submodule.{}.ignore untracked
 
 
 
-git submodule --quiet foreach 'echo "doc/tags*" >.git/info/exclude'
+git submodule --quiet foreach 'echo "doc/tags*" >.git/modules/$GIT_DIR/info/exclude'

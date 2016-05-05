@@ -173,6 +173,8 @@
 [submodule "bundle/LanguageTool"]
 	path = bundle/LanguageTool
 	url = https://github.com/vim-scripts/LanguageTool
+	ignore = untracked
 [submodule "bundle/vim-bazel"]
 	path = bundle/vim-bazel
 	url = https://github.com/davidzchen/vim-bazel.git
+	ignore = untracked
