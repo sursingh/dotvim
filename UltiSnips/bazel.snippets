@@ -1,0 +1,28 @@
+
+snippet library "library rule" b
+cc_library(
+	name = "${1}",
+	srcs = ["$1.cpp"],
+	hdrs = ["$1.h"],
+	copts = ["-std=c++11"],
+	includes = ["."]
+	)
+
+cc_test(
+	name = "test",
+	srcs = ["$1_test.cpp"],
+	copts = ["-std=c++11", "-Iexternal/gtest", "-Iexternal/gtest/include"],
+	deps = ["//external:gtest_main", ":$1"]
+	)
+endsnippet
+
+snippet test "test rule" b
+cc_test(
+	name = "${1}",
+	srcs = ["$1.cpp"],
+	copts = ["-std=c++11", "-Iexternal/gtest", "-Iexternal/gtest/include"],
+	deps = ["//external:gtest_main"]
+	)
+
+endsnippet
+

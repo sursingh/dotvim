@@ -1,0 +1,41 @@
+
+snippet !f "field for a model"
+- !Field
+  name : ${1:name of field}
+  type : ${2:type of field}
+  doc  : |
+      ${3:Field Documentation}
+$4
+endsnippet
+
+snippet !model "define a new model type"
+- !Model
+  name: ${1:Name of type}
+  doc : ${2:Documentation for model}
+  fields :
+    $3
+endsnippet
+
+snippet !type "A new type definition" b
+- !Type
+  name: ${1:Name of type}
+  doc : ${2:Documentation for model}
+  format: ${3:Format for generating fake data}
+endsnippet
+
+snippet !ctype "define a new complex type"
+- !ComplexType
+  name: ${1:Name of type}
+  doc : ${2:Documentation for model}
+  fields :
+    $3
+endsnippet
+
+snippet !enum "A new type definition" b
+- !Enum
+  name: ${1:Name of type}
+  doc : ${2:Documentation for model}
+  values: [${3}]
+endsnippet
+
+# vim: set et ts=4 sw=4 sts :

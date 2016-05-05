@@ -1,0 +1,16 @@
+
+snippet randii "Generate a seq of random numbers"
+
+`!p import random
+if not snip.c:
+  d = range(10)
+  random.shuffle(d)
+  snip.rv = "{" + ", ".join(map(str, d)) + "}"`
+endsnippet
+
+snippet ii "Generate a seq of random numbers"
+`!p import random
+if not snip.c:
+  d = range(10)
+  snip.rv = "{" + ", ".join(map(str, d)) + "}"`
+endsnippet

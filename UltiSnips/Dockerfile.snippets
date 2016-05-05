@@ -1,0 +1,6 @@
+
+snippet apt-get "install application" b
+RUN \
+    export DEBIAN_FRONTEND=noninteractive \
+    && apt-get ${1:install} ${2}
+endsnippet
