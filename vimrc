@@ -213,4 +213,6 @@ au BufRead *.stg set fdm=syntax ft=stg
 
 set et
 
+let g:languagetool_jar='/opt/langtool/LanguageTool-3.1/languagetool-commandline.jar'
+
 " vim: set fdm=marker : "
