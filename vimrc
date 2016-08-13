@@ -138,6 +138,7 @@ set pumheight=6             " Keep a small completion window
 " Python
 "au BufRead *.py compiler nose
 au FileType python set omnifunc=pythoncomplete#Complete
+au FileType python set omnifunc=python3complete#Complete
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 cin cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 cin cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
@@ -214,5 +215,7 @@ au BufRead *.stg set fdm=syntax ft=stg
 set et
 
 let g:languagetool_jar='/opt/langtool/LanguageTool-3.1/languagetool-commandline.jar'
+
+let g:jsx_ext_required = 0
 
 " vim: set fdm=marker : "
