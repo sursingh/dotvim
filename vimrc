@@ -2,6 +2,8 @@
 map <leader>td <Plug>TaskList
 
 set softtabstop=4
+inoremap jk <Esc>
+inoremap jkw <Esc>:w<cr>
 
 " Run pep8
 let g:pep8_map='<leader>8'
@@ -186,6 +188,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['eslint']
 " }}}
 
 
@@ -201,6 +205,7 @@ autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
 autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 0
 autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
 autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
+
 " }}}
 
 " Mappings for angular {{{

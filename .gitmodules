@@ -181,9 +181,12 @@
 [submodule "bundle/jsx"]
 	path = bundle/jsx
 	url = https://github.com/mxw/vim-jsx.git
+	ignore = untracked
 [submodule "bundle/FuzzyFinder"]
 	path = bundle/FuzzyFinder
 	url = https://github.com/vim-scripts/FuzzyFinder.git
+	ignore = untracked
 [submodule "bundle/L9"]
 	path = bundle/L9
 	url = https://github.com/vim-scripts/L9.git
+	ignore = untracked
