@@ -46,10 +46,6 @@
 	path = bundle/VOoM
 	url = https://github.com/vim-scripts/VOoM.git
 	ignore = untracked
-[submodule "bundle/c-support"]
-	path = bundle/c-support
-	url = https://sursingh@github.com/sursingh/c.vim.git
-	ignore = untracked
 [submodule "bundle/greputils"]
 	path = bundle/greputils
 	url = https://github.com/vim-scripts/greputils.git
