@@ -10,9 +10,61 @@
 	path = bundle/color-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
 	ignore = untracked
+[submodule "bundle/lawrencium"]
+	path = bundle/lawrencium
+	url = https://github.com/ludovicchabant/vim-lawrencium.git
+	ignore = untracked
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer.git
+	ignore = untracked
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+	ignore = untracked
 [submodule "bundle/youcompleteme"]
 	path = bundle/youcompleteme
 	url = https://github.com/Valloric/YouCompleteMe
+	ignore = untracked
+[submodule "bundle/vimfiler"]
+	path = bundle/vimfiler
+	url = https://github.com/Shougo/vimfiler.vim.git
+	ignore = untracked
+[submodule "bundle/unite"]
+	path = bundle/unite
+	url = https://github.com/Shougo/unite.vim.git
+	ignore = untracked
+[submodule "bundle/cscope"]
+	path = bundle/cscope
+	url = https://github.com/vim-scripts/cscope.vim.git
+	ignore = untracked
+[submodule "bundle/colors-solarized"]
+	path = bundle/colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+	ignore = untracked
+[submodule "bundle/FuzzyFinder"]
+	path = bundle/FuzzyFinder
+	url = https://github.com/vim-scripts/FuzzyFinder.git
+	ignore = untracked
+[submodule "bundle/L9"]
+	path = bundle/L9
+	url = https://github.com/vim-scripts/L9.git
+	ignore = untracked
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+	ignore = untracked
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+	ignore = untracked
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+	ignore = untracked
+[submodule "bundle/snippets"]
+	path = bundle/snippets
+	url = https://github.com/honza/vim-snippets.git
 	ignore = untracked
 [submodule "bundle/SimpylFold"]
 	path = bundle/SimpylFold
@@ -22,24 +74,7 @@
 	path = bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
 	ignore = untracked
-[submodule "bundle/FuzzyFinder"]
-	path = bundle/FuzzyFinder
-	url = https://github.com/vim-scripts/FuzzyFinder.git
+[submodule "bundle/python-pep8-indent"]
+	path = bundle/python-pep8-indent
+	url = https://github.com/hynek/vim-python-pep8-indent.git
 	ignore = untracked
-[submodule "bundle/tagbar"]
-	path = bundle/tagbar
-	url = https://github.com/majutsushi/tagbar.git
-	ignore = untracked
-[submodule "bundle/L9"]
-	path = bundle/L9
-	url = https://github.com/vim-scripts/L9.git
-	ignore = untracked
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = https://github.com/ervandew/supertab.git
-[submodule "bundle/ultisnips"]
-	path = bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
-[submodule "bundle/snippets"]
-	path = bundle/snippets
-	url = https://github.com/honza/vim-snippets.git
