@@ -29,6 +29,10 @@ set guifont=Monospace\ 10
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
+" }}}
+
+" {{{ General Customizations
+" set columns=80
 
 set modeline
 " set statusline=%{fugitive#statusline()}
@@ -37,8 +41,6 @@ set laststatus=2
 set scrolloff=5
 set cursorline
 
-" {{{ General Customizations
-" set columns=80
 let c_space_errors=1
 set cmdheight=1
 set textwidth=78 shiftwidth=2 et
@@ -72,8 +74,6 @@ map  <ESC>:e#
 
 " }}}
 
-
-
 " Colorscheme {{{
 set t_Co=256
 let g:solarized_termcolors=256
@@ -99,3 +99,8 @@ map <F3> :YcmCompleter GoTo<CR>
 " python mappings
 au BufNewFile,BufRead *.py set ts=4 sts=4 sw=4 tw=79 et ai fileformat=unix
 
+" Fuzzyfinder {{{
+nmap ,f :FufFileWithCurrentBufferDir<CR>
+nmap ,b :FufBuffer<CR>
+nmap ,t :FufTaggedFile<CR>
+" }}}
