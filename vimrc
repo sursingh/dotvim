@@ -96,6 +96,22 @@ let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 map <F3> :YcmCompleter GoTo<CR>
 " }}}
 
+" Ultisnips {{{
+let g:UltiSnipsSnippetsDir="~/.vim/mysnips"
+let g:UltiSnipsSnippetDirectories=['UltiSnips', 'mysnips']
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" }}}
+
 " python mappings
 au BufNewFile,BufRead *.py set ts=4 sts=4 sw=4 tw=79 et ai fileformat=unix
 
