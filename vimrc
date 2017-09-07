@@ -1,4 +1,6 @@
-set cin
+"set cin
+filetype indent on
+
 set sw=4
 set softtabstop=4
 set et
@@ -114,6 +116,8 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " python mappings
 au BufNewFile,BufRead *.py set ts=4 sts=4 sw=4 tw=79 et ai fileformat=unix
+    \ fdm=indent
+    \ foldlevel=1
 
 " Fuzzyfinder {{{
 nmap ,f :FufFileWithCurrentBufferDir<CR>

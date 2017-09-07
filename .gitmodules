@@ -78,3 +78,6 @@
 	path = bundle/python-pep8-indent
 	url = https://github.com/Vimjas/vim-python-pep8-indent.git
 	ignore = untracked
+[submodule "bundle/rust"]
+	path = bundle/rust
+	url = https://github.com/rust-lang/rust.vim.git
