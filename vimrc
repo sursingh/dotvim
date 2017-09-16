@@ -114,6 +114,10 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " }}}
 
+" Syntastic {{{
+let g:syntastic_python_python_exec = 'python3'  " support python3 syntax 
+" }}}
+
 " python mappings
 au BufNewFile,BufRead *.py set ts=4 sts=4 sw=4 tw=79 et ai fileformat=unix
     \ fdm=indent
