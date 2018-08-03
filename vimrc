@@ -26,7 +26,10 @@ map <leader>j :RopeGotoDefinition<CR>
 " Rename whatever the cursor is on (including references to it)
 map <leader>r :RopeRename<CR>
 
-set guifont=Monospace\ 10
+set guifont=inconsolata\ 12
+set guioptions-=m
+set guioptions-=M
+set guioptions-=T
 " Load pathogen with docs for all plugins {{{
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
@@ -79,7 +82,7 @@ map  <ESC>:e#
 " Colorscheme {{{
 set t_Co=256
 let g:solarized_termcolors=256
-set background=light
+set background=dark
 colorscheme solarized
 " }}}
 
@@ -127,4 +130,23 @@ au BufNewFile,BufRead *.py set ts=4 sts=4 sw=4 tw=79 et ai fileformat=unix
 nmap ,f :FufFileWithCurrentBufferDir<CR>
 nmap ,b :FufBuffer<CR>
 nmap ,t :FufTaggedFile<CR>
+" }}}
+
+" {{{go plugin
+au BufNewFile,BufRead *.go set ts=4 sw=4 tw=79 ai fileformat=unix
+    \ fdm=indent
+    \ foldlevel=1
+
+
+" use goimports for formatting
+let g:go_fmt_command = "goimports"
+
+" turn highlighting on
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 " }}}
