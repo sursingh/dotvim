@@ -4,6 +4,7 @@ filetype indent on
 set sw=4
 set softtabstop=4
 set et
+set nu
 
 " open/close the quickfix window
 nmap <leader>c :copen<CR>
@@ -82,7 +83,7 @@ map  <ESC>:e#
 " Colorscheme {{{
 set t_Co=256
 let g:solarized_termcolors=256
-set background=dark
+set background=light
 colorscheme solarized
 " }}}
 
@@ -124,7 +125,7 @@ let g:syntastic_python_python_exec = 'python3'  " support python3 syntax
 " python mappings
 au BufNewFile,BufRead *.py set ts=4 sts=4 sw=4 tw=79 et ai fileformat=unix
     \ fdm=indent
-    \ foldlevel=1
+    \ foldlevel=2
 
 " Fuzzyfinder {{{
 nmap ,f :FufFileWithCurrentBufferDir<CR>
@@ -135,7 +136,7 @@ nmap ,t :FufTaggedFile<CR>
 " {{{go plugin
 au BufNewFile,BufRead *.go set ts=4 sw=4 tw=79 ai fileformat=unix
     \ fdm=indent
-    \ foldlevel=1
+    \ foldlevel=3
 
 
 " use goimports for formatting
@@ -150,3 +151,7 @@ let g:go_highlight_build_constraints = 1
 
 let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 " }}}
+" 
+
+let mapleader=","
+map <Leader>s :CSearch <cword><CR>
