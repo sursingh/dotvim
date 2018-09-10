@@ -87,3 +87,6 @@
 [submodule "bundle/jsonnet"]
 	path = bundle/jsonnet
 	url = https://github.com/google/vim-jsonnet
+[submodule "bundle/bazel"]
+	path = bundle/bazel
+	url = https://github.com/bazelbuild/vim-bazel.git
