@@ -127,6 +127,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " Syntastic {{{
 let g:syntastic_python_python_exec = 'python3'  " support python3 syntax 
+let g:syntastic_python_checkers = ['flake8']
 " }}}
 
 " python mappings

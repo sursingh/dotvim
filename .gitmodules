@@ -101,3 +101,6 @@
 [submodule "bundle/nerdtree-git-plugin"]
 	path = bundle/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "bundle/autopep8"]
+	path = bundle/autopep8
+	url = https://github.com/tell-k/vim-autopep8.git
