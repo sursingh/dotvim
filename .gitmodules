@@ -81,12 +81,20 @@
 [submodule "bundle/go"]
 	path = bundle/go
 	url = https://github.com/fatih/vim-go.git
+	ignore = untracked
 [submodule "bundle/csearch"]
 	path = bundle/csearch
 	url = https://github.com/brandonbloom/csearch.vim.git
+	ignore = untracked
 [submodule "bundle/jsonnet"]
 	path = bundle/jsonnet
 	url = https://github.com/google/vim-jsonnet
+	ignore = untracked
 [submodule "bundle/bazel"]
 	path = bundle/bazel
 	url = https://github.com/bazelbuild/vim-bazel.git
+	ignore = untracked
+[submodule "bundle/maktaba"]
+	path = bundle/maktaba
+	url = https://github.com/google/vim-maktaba.git
+	ignore = untracked
