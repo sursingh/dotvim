@@ -10,8 +10,15 @@ set nu
 nmap <leader>c :copen<CR>
 nmap <leader>cc :cclose<CR>
 
-" Open NerdTree
+" NerdTree {{{
 map <leader>n :NERDTreeToggle<CR>
+" close NerdTree when you open a file
+
+nnoremap <silent> <Leader>v :NERDTreeFind<CR>
+let NERDTreeQuitOnOpen = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+" }}}
 
 " Run command-t file search
 map <leader>f :CommandT<CR>

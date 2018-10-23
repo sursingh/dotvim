@@ -98,3 +98,6 @@
 	path = bundle/maktaba
 	url = https://github.com/google/vim-maktaba.git
 	ignore = untracked
+[submodule "bundle/nerdtree-git-plugin"]
+	path = bundle/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
