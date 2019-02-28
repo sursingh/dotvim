@@ -31,7 +31,8 @@ class Git(ShellCmd):
 
     @classmethod
     def get_modules(cls):
-        cmd = ['git', 'config', '--file', '.gitmodules', '--get-regexp', 'path']
+        cmd = ['git', 'config', '--file', '.gitmodules', '--get-regexp',
+               'path$']
         res = cls.run(*cmd)
         mods = (m.split()[-1] for m in res.strip().split('\n'))
         names = (m.split('/')[-1] for m in mods)
@@ -65,7 +66,7 @@ class Manager(cmd.Cmd, Git):
 
     def do_rm(self, line):
         modname = self._modules[line]
-        self.submodule('deinit', modname)
+        self.submodule('deinit', "-f", modname)
         self.git('rm', modname)
         self.git('rm', '-f', modname)
         self.run('rm', '-rf', '.git/modules/' + modname)
