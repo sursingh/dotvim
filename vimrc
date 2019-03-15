@@ -18,6 +18,8 @@ nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+
+let NERDTreeIgnore = ['\.pyc$', '.pb.*']
 " }}}
 
 " Run command-t file search
@@ -56,7 +58,7 @@ set cursorline
 
 let c_space_errors=1
 set cmdheight=1
-set textwidth=78 shiftwidth=2 et
+set textwidth=78 shiftwidth=4 et
 set modeline modelines=5
 set backspace=2			" allow backspacing over everything in insert mode
 set ruler				" show line and column number of the cursor position

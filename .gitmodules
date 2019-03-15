@@ -104,3 +104,6 @@
 [submodule "bundle/autopep8"]
 	path = bundle/autopep8
 	url = https://github.com/tell-k/vim-autopep8.git
+[submodule "bundle/gradle"]
+	path = bundle/gradle
+	url = https://github.com/vim-scripts/vim-gradle.git
