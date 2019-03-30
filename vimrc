@@ -163,6 +163,14 @@ let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 " }}}
 " 
 
+" {{{ ack config
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+let g:ackhighlight = 1
+let g:ack_use_dispatch = 1
+" }}}
+
 let mapleader=","
 map <Leader>s :CSearch <cword><CR>
 
