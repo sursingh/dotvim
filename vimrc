@@ -161,7 +161,6 @@ let g:go_highlight_build_constraints = 1
 
 let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 " }}}
-" 
 
 " {{{ ack config
 if executable('ag')
@@ -169,6 +168,12 @@ if executable('ag')
 endif
 let g:ackhighlight = 1
 let g:ack_use_dispatch = 0
+" }}}
+
+" {{{ ctrlp config
+if executable('ag')
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 " }}}
 
 let mapleader=","
