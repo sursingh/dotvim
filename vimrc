@@ -165,3 +165,6 @@ let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 
 let mapleader=","
 map <Leader>s :CSearch <cword><CR>
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*_pb2.py,*/dist/*,*/packages/*,*/build/*
+set wildignore+=*.class

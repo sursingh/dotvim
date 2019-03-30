@@ -107,3 +107,6 @@
 [submodule "bundle/gradle"]
 	path = bundle/gradle
 	url = https://github.com/vim-scripts/vim-gradle.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/ctrlpvim/ctrlp.vim.git

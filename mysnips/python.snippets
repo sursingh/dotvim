@@ -1,0 +1,6 @@
+
+snippet argparse "Argparse-based command-line parsing" !b
+parser = argparse.ArgumentParser(description="${1}")
+parser.add_argument('-v', '--verbose', action='store_true')
+args = parser.parse_args()
+endsnippet
