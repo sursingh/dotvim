@@ -1,5 +1,5 @@
 #!/bin/sh
 
-git submodule update --recursive --init --rebase --remote
+git submodule update --init --rebase --remote
 
-(cd bundle/youcompleteme; python3 install.py)
+(cd bundle/youcompleteme; git submodule update --recursive; python3 install.py)

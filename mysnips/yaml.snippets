@@ -1,0 +1,50 @@
+
+
+snippet k8_deployment "Define a kubernetes deployment" b
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${1}
+  namespace: ${4:`basename $PWD`}
+  labels:
+    app: ${2}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: $2
+  template:
+    metadata:
+      labels:
+        app: $2
+    spec:
+      containers:
+      - name: $2
+        image: ${3:dockerimage}
+        ports:
+        env:
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: $2
+    kubernetes.io/name: $1
+  name: $1
+  namespace: $4
+spec:
+  ports:
+  - port: 8086
+    targetPort: 8086
+  selector:
+    app: $2
+endsnippet
+
+snippet env "Define environment var" b
+- name: ${1}
+  value: "${2}"
+endsnippet
+
+snippet port "Define a container port" b
+- ${1}: ${2}
+endsnippet
