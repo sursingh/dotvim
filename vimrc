@@ -181,3 +181,8 @@ map <Leader>s :CSearch <cword><CR>
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*_pb2.py,*/dist/*,*/packages/*,*/build/*
 set wildignore+=*.class
+
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
