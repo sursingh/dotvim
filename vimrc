@@ -182,6 +182,9 @@ map <Leader>s :CSearch <cword><CR>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*_pb2.py,*/dist/*,*/packages/*,*/build/*
 set wildignore+=*.class
 
+au BufNewFile,BufRead *.yaml set sw=2
+
+
 noremap <Leader>y "*y
 noremap <Leader>p "*p
 noremap <Leader>Y "+y

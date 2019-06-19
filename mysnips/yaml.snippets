@@ -1,43 +1,42 @@
-
-
 snippet k8_deployment "Define a kubernetes deployment" b
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ${1}
-  namespace: ${4:`basename $PWD`}
+  name: ${1i:`!p snip.rv = snip.basename`}
   labels:
-    app: ${2}
+    app: $1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: $2
+      app: $1
   template:
     metadata:
       labels:
-        app: $2
+        app: $1
     spec:
       containers:
-      - name: $2
-        image: ${3:dockerimage}
+      - name: $1
+        image: "localhost:5000/$1-image:dev",
         ports:
+	  - containerPort: 8888
         env:
----
+endsnippet
+
+snippet k8_service "Define a kubernetes service" b
 apiVersion: v1
 kind: Service
 metadata:
+  name: ${1:`!p snip.rv = snip.basename`}
   labels:
-    app: $2
+    app: $1
     kubernetes.io/name: $1
-  name: $1
-  namespace: $4
 spec:
-  ports:
-  - port: 8086
-    targetPort: 8086
   selector:
-    app: $2
+    app: $1
+  ports:
+  - port: 8888
+    targetPort: 8888
 endsnippet
 
 snippet env "Define environment var" b
@@ -47,4 +46,35 @@ endsnippet
 
 snippet port "Define a container port" b
 - ${1}: ${2}
+endsnippet
+
+snippet pvc "Define a PVC" b
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: ${1:`!p snip.rv = snip.basename`}-pvc
+spec:
+  storageClassName: general
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: ${2:2}Gi
+endsnippet
+
+snippet pv "Define a PV" b
+apiVersion: v1                                                                  
+kind: PersistentVolume
+metadata:
+  name: ${1:`!p snip.rv = snip.basename`}-pv
+  labels:
+    type: local
+spec:
+  storageClassName: ${2:$1}
+  capacity:
+    storage: ${3:20}Gi 
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/$2"
 endsnippet

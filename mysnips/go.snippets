@@ -1,0 +1,100 @@
+global !p
+from os import path as osp
+def abspath(f):
+	return osp.abspath(f)
+
+def getdir(f):
+	return osp.dirname(osp.abspath(f))
+
+def cmdpath(f):
+	dname = getdir(f)
+	res = dname.rsplit("/cmd", 1)
+	return res[-1][1:]
+
+def cmdname(f):
+	n = osp.basename(f).rstrip(".go")
+	return "all" if n == "root" else n
+	
+
+def optpath(f):
+	cp = cmdpath(f)
+	cn = cmdname(f)
+	return cp.replace("/", ".") + "." + cn
+
+def gopackage(f, lvl=0):
+	dname = getdir(f)
+	while lvl > 0:
+		dname = osp.dirname(dname)
+		lvl -= 1
+	return osp.basename(dname)
+
+endglobal
+
+snippet cmd "Create Command shell"
+package `!p snip.rv = gopackage(path)`
+
+import (
+	"fmt"
+
+	"github.com/spf13/cobra"
+)
+
+func $1(cmd *cobra.Command, args []string) {
+	${0:fmt.Println("$1 called")}
+}
+
+// $1Cmd represents the $1 command
+var $1Cmd = &cobra.Command{
+	Use:   "${1:`!p snip.rv = snip.basename`}",
+	Short: "${2:$1 for $4}",
+	Long: \`${3:A longer description}
+	\`,
+	Run: $1,
+}
+
+func init() {
+	${4:`!p snip.rv = gopackage(path)`}Cmd.AddCommand($1Cmd)
+}
+endsnippet
+
+snippet rootcmd "Create root Command shell"
+package ${1:`!p snip.rv = gopackage(path)`}
+
+import (
+	"github.com/spf13/cobra"
+)
+
+// $1Cmd represents the $1 command
+var $1Cmd = &cobra.Command{
+	Use:   "$1",
+	Short: "${2:Root for $1}",
+	Long: \`${3:A longer description}\`,
+}
+
+// AddCommands registers with a parent command
+func AddCommands(parent *cobra.Command) {
+	parent.AddCommand($1Cmd)
+}
+endsnippet
+
+snippet package "go package" b
+package `!p snip.rv = gopackage(path)`
+endsnippet
+
+snippet copt "Command options"
+Flags.${1:String}("${2:optname}", ${3:""}, "${4:$2}")
+viper.BindPFlag("`!p snip.rv = optpath(path)`.$2", Flags.Lookup("$2"))
+endsnippet
+
+snippet newt "create a new type" b
+// $1 type
+type ${1:Type} struct {
+}
+
+// New$1 creates a new instance of $1
+func New$1() *$1 {
+	val := &$1{
+	}
+	return val
+}
+endsnippet

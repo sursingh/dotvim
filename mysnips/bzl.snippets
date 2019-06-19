@@ -1,0 +1,28 @@
+
+snippet k8def "k8 deploymnet" b
+load("@io_bazel_rules_k8s//k8s:objects.bzl", "k8s_objects")
+load("@k8s_deploy//:defaults.bzl", "k8s_deploy")
+
+k8s_deploy(
+  name = "${1:name}_deploy",
+  kind = "deployment",
+  template = ":deployment.yaml",
+  images = {
+    "gcr.io/rules_k8s/$1:dev": ":$1-image"
+  },
+)
+k8s_deploy(
+  name = "${1:name}_service",
+  kind = "service",
+  template = ":service.yaml",
+)
+
+k8s_objects(
+  name = "",
+  objects = [
+    ":$1_deploy",
+    ":$1_service",
+  ],
+}
+
+endsnippet
