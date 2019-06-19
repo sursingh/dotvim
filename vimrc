@@ -164,7 +164,7 @@ let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 
 " {{{ ack config
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+  let g:ackprg = 'ag --path-to-ignore ~/.ignore --vimgrep'
 endif
 let g:ackhighlight = 1
 let g:ack_use_dispatch = 0
@@ -172,7 +172,7 @@ let g:ack_use_dispatch = 0
 
 " {{{ ctrlp config
 if executable('ag')
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    let g:ctrlp_user_command = 'ag %s --path-to-ignore ~/.ignore -l --nocolor -g ""'
 endif
 " }}}
 
@@ -183,7 +183,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*_pb2.py,*/dist/*,*/packages/*,*/build/
 set wildignore+=*.class
 
 au BufNewFile,BufRead *.yaml set sw=2
-
+au BufNewFile,BufRead *.tmpl set ft=jinja
 
 noremap <Leader>y "*y
 noremap <Leader>p "*p
