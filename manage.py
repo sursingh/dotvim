@@ -52,12 +52,12 @@ class Manager(cmd.Cmd, Git):
     def do_add(self, line):
         url = line
         name = url.split('/')[-1]
-        name = re.sub(
+        name = "bundle/" + re.sub(
                 r'(vim-)?(.*?)(.vim)?(.git)?$',
-                r'bundle/\2',
+                r'\2',
                 name)
         self.submodule('add', url, name)
-        self.submodule('update', '--recursive', '--init', name)
+        self.submodule('update', '--recursive', '--init', '--depth', "1", name)
 
         self._load_modules()
 
@@ -74,7 +74,7 @@ class Manager(cmd.Cmd, Git):
 
     def do_ls(self, line):
         print('list of vim plugins:')
-        for i, m in enumerate(self._modules.keys()):
+        for i, m in enumerate(sorted(self._modules.keys())):
             print('   %2d: %s' % (i, m))
 
     def _complete_modules(self, text, line, begidx, endidx):
