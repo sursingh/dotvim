@@ -121,3 +121,12 @@
 	path = bundle/Vim-Jinja2-Syntax
 	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
 	ignore = untracked
+[submodule "bundle/system-copy"]
+	path = bundle/system-copy
+	url = https://github.com/christoomey/vim-system-copy.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/commentary"]
+	path = bundle/commentary
+	url = https://github.com/tpope/vim-commentary.git
