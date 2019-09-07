@@ -42,6 +42,36 @@ set guioptions-=M
 set guioptions-=T
 " Load pathogen with docs for all plugins {{{
 runtime bundle/pathogen/autoload/pathogen.vim
+
+let g:pathogen_blacklist = []
+" call add(g:pathogen_blacklist, 'color-solarized')
+
+" call add(g:pathogen_blacklist, 'ack')
+" call add(g:pathogen_blacklist, 'autopep8')
+" call add(g:pathogen_blacklist, 'bazel')
+" call add(g:pathogen_blacklist, 'commentary')
+" call add(g:pathogen_blacklist, 'csearch')
+" call add(g:pathogen_blacklist, 'ctrlp')
+" call add(g:pathogen_blacklist, 'FuzzyFinder')
+" call add(g:pathogen_blacklist, 'go')
+" call add(g:pathogen_blacklist, 'jsonnet')
+" call add(g:pathogen_blacklist, 'jsx')
+" call add(g:pathogen_blacklist, 'L9')
+" call add(g:pathogen_blacklist, 'maktaba')
+" call add(g:pathogen_blacklist, 'nerdtree')
+" call add(g:pathogen_blacklist, 'nerdtree-git-plugin')
+" call add(g:pathogen_blacklist, 'python-pep8-indent')
+" call add(g:pathogen_blacklist, 'SimpylFold')
+" call add(g:pathogen_blacklist, 'snippets')
+" call add(g:pathogen_blacklist, 'supertab')
+" call add(g:pathogen_blacklist, 'surround')
+" call add(g:pathogen_blacklist, 'syntastic')
+" call add(g:pathogen_blacklist, 'system-copy')
+" call add(g:pathogen_blacklist, 'tagbar')
+" call add(g:pathogen_blacklist, 'ultisnips')
+" call add(g:pathogen_blacklist, 'vim-fugitive')
+" call add(g:pathogen_blacklist, 'Vim-Jinja2-Syntax')
+" call add(g:pathogen_blacklist, 'youcompleteme')
 call pathogen#infect()
 call pathogen#helptags()
 " }}}
@@ -96,20 +126,20 @@ set background=light
 colorscheme solarized
 " }}}
 
-" Configure YouCompleteMe {{{
-" ---------------------------------- "
-let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
-let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
-let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
-let g:ycm_complete_in_comments = 1 " Completion in comments
-let g:ycm_complete_in_strings = 1 " Completion in string
+" " Configure YouCompleteMe {{{
+" " ---------------------------------- "
+" let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
+" let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
+" let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
+" let g:ycm_complete_in_comments = 1 " Completion in comments
+" let g:ycm_complete_in_strings = 1 " Completion in string
 
-let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
+" let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 
-" Goto definition with F3
-map <F3> :YcmCompleter GoTo<CR>
-" }}}
+" " Goto definition with F3
+" map <F3> :YcmCompleter GoTo<CR>
+" " }}}
 
 " Ultisnips {{{
 let g:UltiSnipsSnippetsDir="~/.vim/mysnips"
@@ -183,9 +213,10 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*_pb2.py,*/dist/*,*/packages/*,*/build/
 set wildignore+=*.class
 
 au BufNewFile,BufRead *.yaml set sw=2
+au BufNewFile,BufRead *.js set sw=2
+au BufNewFile,BufRead *.jsx set sw=2
 au BufNewFile,BufRead *.tmpl set ft=jinja
 
-noremap <Leader>y "*y
-noremap <Leader>p "*p
-noremap <Leader>Y "+y
-noremap <Leader>P "+p
+
+noremap zz :wq<CR>
+noremap zs :w<CR>
