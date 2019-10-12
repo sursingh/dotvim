@@ -133,3 +133,6 @@
 [submodule "bundle/jsx"]
 	path = bundle/jsx
 	url = https://github.com/mxw/vim-jsx.git
+[submodule "bundle/unimpaired"]
+	path = bundle/unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
